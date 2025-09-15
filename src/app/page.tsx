@@ -129,7 +129,7 @@ export default function HeladeriaPrincipal() {
                     🔍
                   </div>
                   <div id="search-description" className="sr-only">
-                    Escribe para buscar productos por nombre
+                    Helado de yogurt...
                   </div>
                 </div>
                 
