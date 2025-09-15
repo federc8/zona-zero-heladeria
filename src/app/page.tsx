@@ -407,7 +407,7 @@ export default function HeladeriaPrincipal() {
       {/* Botón flotante de WhatsApp para móvil */}
       <WhatsAppButton
         phoneNumber="573113828117"
-        variant="header"
+        variant="floating"
         message="Hola, quiero probar la magia de zona zero"
       />
     </div>
