@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/',
+      disallow: ['/api/', '/_next/', '/admin/'],
     },
-    sitemap: 'https://zonazero-heladeria.com/sitemap.xml', // Cambiar por tu dominio real
+    sitemap: 'https://www.heladeriazonazero.com/sitemap.xml',
   }
 }

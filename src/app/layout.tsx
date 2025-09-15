@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://zonazero-heladeria.com"), // Cambiar por tu dominio real
+  metadataBase: new URL("https://www.heladeriazonazero.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Zona Zero Heladería - Los Mejores Helados y Postres",
     description: "Disfruta de los mejores helados de yogurt, obleas, ensaladas de frutas y postres en Zona Zero Heladería. Productos frescos con variedad de toppings y sabores únicos.",
-    url: "https://zonazero-heladeria.com", // Cambiar por tu dominio real
+    url: "https://www.heladeriazonazero.com",
     siteName: "Zona Zero Heladería",
     images: [
       {
