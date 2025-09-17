@@ -73,7 +73,10 @@ export default function HeladeriaPrincipal() {
       <SkipToContent />
       <StructuredData />
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-[var(--primary)] shadow-sm" role="banner">
+      <header
+        className="sticky top-0 z-10 bg-[var(--primary)] shadow-sm"
+        role="banner"
+      >
         {/* Desktop Header */}
         <div className="hidden lg:block">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4">
@@ -90,7 +93,11 @@ export default function HeladeriaPrincipal() {
               </div>
 
               {/* Categorías centro */}
-              <nav className="flex items-center space-x-2" role="navigation" aria-label="Categorías de productos">
+              <nav
+                className="flex items-center space-x-2"
+                role="navigation"
+                aria-label="Categorías de productos"
+              >
                 {categories.map((category) => {
                   return (
                     <button
@@ -125,17 +132,20 @@ export default function HeladeriaPrincipal() {
                     className="w-64 px-4 py-2 pl-10 rounded-lg border border-white/30 bg-white/10 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none text-sm backdrop-blur-sm"
                     aria-describedby="search-description"
                   />
-                  <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70 text-sm" aria-hidden="true">
+                  <div
+                    className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70 text-sm"
+                    aria-hidden="true"
+                  >
                     🔍
                   </div>
                   <div id="search-description" className="sr-only">
-                    Escribe para buscar productos por nombre
+                    Helado de yogurt...
                   </div>
                 </div>
-                
+
                 {/* Botón de WhatsApp para desktop */}
-                <WhatsAppButton 
-                  phoneNumber="573113828117" 
+                <WhatsAppButton
+                  phoneNumber="573113828117"
                   variant="header"
                   message="Hola, quiero probar la magia de zona zero"
                 />
@@ -172,10 +182,10 @@ export default function HeladeriaPrincipal() {
             <div className="flex items-center">
               {/* Categorías con scroll horizontal */}
               <div className="flex-1 min-w-0 mr-3">
-                <nav 
+                <nav
                   className="flex space-x-2 overflow-x-auto scrollbar-hide pb-2"
                   style={{ scrollbarWidth: "none" }}
-                  role="navigation" 
+                  role="navigation"
                   aria-label="Categorías de productos"
                 >
                   {categories.map((category) => {
@@ -207,7 +217,9 @@ export default function HeladeriaPrincipal() {
               <button
                 onClick={() => setShowMobileSearch(!showMobileSearch)}
                 className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                aria-label={showMobileSearch ? "Ocultar buscador" : "Mostrar buscador"}
+                aria-label={
+                  showMobileSearch ? "Ocultar buscador" : "Mostrar buscador"
+                }
                 aria-expanded={showMobileSearch}
                 aria-controls="mobile-search-container"
               >
@@ -237,7 +249,10 @@ export default function HeladeriaPrincipal() {
                   className="w-full px-4 py-2 pl-10 rounded-lg border border-white/30 bg-white/10 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none text-sm backdrop-blur-sm"
                   aria-describedby="mobile-search-description"
                 />
-                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70 text-sm" aria-hidden="true">
+                <div
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70 text-sm"
+                  aria-hidden="true"
+                >
                   🔍
                 </div>
                 <div id="mobile-search-description" className="sr-only">
@@ -249,7 +264,7 @@ export default function HeladeriaPrincipal() {
         </div>
       </header>
 
-      <main 
+      <main
         id="main-content"
         className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-4 sm:py-6"
         tabIndex={-1}
@@ -286,9 +301,12 @@ export default function HeladeriaPrincipal() {
         </div>
 
         {/* Lista de productos */}
-        <section className="mb-6 flex flex-col items-center" aria-label="Productos disponibles">
+        <section
+          className="mb-6 flex flex-col items-center"
+          aria-label="Productos disponibles"
+        >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center mb-4 sm:mb-6 gap-2 w-full max-w-6xl">
-            <span 
+            <span
               className="text-sm text-[var(--descriptionText)] text-center"
               role="status"
               aria-live="polite"
@@ -300,7 +318,9 @@ export default function HeladeriaPrincipal() {
 
           {filteredProducts.length === 0 ? (
             <div className="text-center py-16" role="status" aria-live="polite">
-              <div className="text-6xl mb-4" aria-hidden="true">😔</div>
+              <div className="text-6xl mb-4" aria-hidden="true">
+                😔
+              </div>
               <p className="text-[var(--descriptionText)] text-lg">
                 No se encontraron productos
               </p>
@@ -310,7 +330,7 @@ export default function HeladeriaPrincipal() {
             </div>
           ) : (
             <div className="w-full max-w-6xl">
-              <div 
+              <div
                 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center"
                 role="list"
                 aria-label="Productos de la heladería"
@@ -320,7 +340,7 @@ export default function HeladeriaPrincipal() {
                     key={product.id}
                     onClick={() => openProductModal(product)}
                     onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
+                      if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
                         openProductModal(product);
                       }
@@ -328,9 +348,11 @@ export default function HeladeriaPrincipal() {
                     className="bg-white border-none border-gray-100 overflow-hidden hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.04)] lg:rounded-xl transition-all duration-200 hover:scale-[1.02] focus:scale-[1.02] flex flex-col w-full max-w-xs cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-opacity-50"
                     role="listitem"
                     tabIndex={0}
-                    aria-label={`Ver detalles de ${product.name}, precio ${new Intl.NumberFormat('es-CO', {
-                      style: 'currency',
-                      currency: 'COP',
+                    aria-label={`Ver detalles de ${
+                      product.name
+                    }, precio ${new Intl.NumberFormat("es-CO", {
+                      style: "currency",
+                      currency: "COP",
                       minimumFractionDigits: 0,
                     }).format(product.price)}`}
                   >
@@ -348,14 +370,20 @@ export default function HeladeriaPrincipal() {
                         <p className="text-sm text-[var(--descriptionText)] mb-4 leading-relaxed line-clamp-3">
                           {product.description}
                         </p>
-                        <div className="text-lg font-bold text-[var(--primary)]" aria-label={`Precio: ${new Intl.NumberFormat('es-CO', {
-                          style: 'currency',
-                          currency: 'COP',
-                          minimumFractionDigits: 0,
-                        }).format(product.price)}`}>
-                          {new Intl.NumberFormat('es-CO', {
-                            style: 'currency',
-                            currency: 'COP',
+                        <div
+                          className="text-lg font-bold text-[var(--primary)]"
+                          aria-label={`Precio: ${new Intl.NumberFormat(
+                            "es-CO",
+                            {
+                              style: "currency",
+                              currency: "COP",
+                              minimumFractionDigits: 0,
+                            }
+                          ).format(product.price)}`}
+                        >
+                          {new Intl.NumberFormat("es-CO", {
+                            style: "currency",
+                            currency: "COP",
                             minimumFractionDigits: 0,
                           }).format(product.price)}
                         </div>
@@ -377,10 +405,10 @@ export default function HeladeriaPrincipal() {
       />
 
       {/* Botón flotante de WhatsApp para móvil */}
-      <WhatsAppButton 
-        phoneNumber="573333333333" 
+      <WhatsAppButton
+        phoneNumber="573113828117"
         variant="floating"
-        message="Hola, me interesa información sobre sus helados"
+        message="Hola, quiero probar la magia de zona zero"
       />
     </div>
   );
